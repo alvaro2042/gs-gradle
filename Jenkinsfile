@@ -11,7 +11,7 @@ node {
   }
   stage('Ejecucion') {
      myGradleContainer.inside("-v ${env.HOME}/.gradle:/home/gradle/.gradle") {
-       sh 'cd complete && gradle run'
+       sh 'cd complete && gradle run --stacktrace'
      }
   }
 }
